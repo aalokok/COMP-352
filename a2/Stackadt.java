@@ -1,11 +1,12 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Stackadt {
 	
-	int top = -1;
-    String stack[] = new String[2];
+	static int top = -1;
+    static String stack[] = new String[2];
 
-    boolean isFull(){
+    
+    
+    static boolean isFull(){
 
         if(top == (stack.length - 1)){
             return true;
@@ -13,10 +14,35 @@ public class Stackadt {
         return false;
     }
 	
+	static void pop() {
+		if(top != -1) {
+			stack[top] = null;
+			top--;
+		}
+		
+	}
+	
+	static void push(String data) {
+		
+		if(isFull()) {
+			String temp[] = new String[stack.length*2];
+			for(int i = 0;i < stack.length;i++) {
+				temp[i] = stack[i];
+			}
+			stack = temp;
+		}
+		
+		top++;
+		
+		
+	}
 	
 	
     public static void main(String[] args) {
         
-
+    	
+    	
+    	
+    	
     }
 }
