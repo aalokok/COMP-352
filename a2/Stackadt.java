@@ -33,7 +33,7 @@ public class Stackadt {
 		}
 		
 		top++;
-		stack[top] = data; // help
+		stack[top] = data; // help me
 		
 	}
 	
